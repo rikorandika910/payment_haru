@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #f3f4f6, #d1f8f4);
+    color: #1f2937;
+    scroll-behavior: smooth;
+    color: white;
+  }
+
+  p {
+    color: whitesmoke;
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background:rgb(2, 0, 118);
+    padding: 0.5rem 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* memastikan isi vertikal tengah */
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1a1a1a;
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 0.5rem 0;
+    display: inline-block;
+  }
+  
+  
+  .navbar a {
+    text-decoration: none;
+    color: #1e293b;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    transition: background 0.3s;
+  }
+  
+  .navbar a:hover {
+    background:rgb(64, 77, 255);
+  }
+  
+  .hero {
+    text-align: center;
+    padding: 5rem 3rem;
+    background: transparent;
+  }
+  
+  .hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #4b5563;
+  }
+  
+  .section {
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .whatsapp {
+    background-color: #25D366;
+  }
+  
+  .telegram {
+    background-color: #0088cc;
+  }
+  
+  .group {
+    background-color: #075e54;
+  }
+  
+  .payment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 0 2rem;
+  }
+  
+  .payment-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: #111827;
+    transition: transform 0.2s, box-shadow 0.3s;
+  }
+  
+  .payment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  }
+  
+  .payment-card img {
+    width: 40px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer {
+    background: #e5e7eb;
+    padding: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #374151;
+  }
+  

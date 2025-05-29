@@ -5,6 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Haru Payment</title>
   <link rel="stylesheet" href="style.css"/>
+  <style>
+    body{
+      scroll-behavior: smooth;
+    }
+    section{
+      scroll-behavior: smooth;
+    }
+    html{
+      scroll-behavior: smooth;
+    }
+    /* Popup modal */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
+.popup-content {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80%;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 45px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+  </style>
 </head>
 <body>
   <header>
@@ -13,6 +54,7 @@
         <li><a href="#dashboard" id="dashboard-link" style="color: whitesmoke;">Dashboard</a></li>
         <li><a href="#about" id="about-link" style="color: white;">About</a></li>
         <li><a href="#payment" id="payment-link" style="color: white;">Payment</a></li>
+        <li><a href="#testimoni" id="testimoni-link" style="color: white;">Testimoni</a></li>
       </ul>
     </nav>
   </header>
@@ -72,10 +114,44 @@
     <p style="text-align: center;">Ada pembayaran lain? segera hubungi <a href="https://wa.me/66628895033">Haru</a></p>
   </section>
 
+<section id="testimoni" class="section" style="background-image: url(J4o.gif);">
+  <div>
+    <h2>Testimoni</h2>
+  </div>
+  <div class="payment-grid">
+    <a href="#" class="payment-card" onclick="showImage(event, 'testimoni1.jpg')">
+      <img src="testimoni.png" alt="Testimoni 1" style="width: 75px;">
+      <span style="margin-bottom: 10px;">Testimoni 1 - Done</span>
+      <span style="color: red; font-style: italic;">*Klik untuk melihat testimoni</span>
+    </a>
+  </div>
+</section>
+
+<!-- Modal Popup -->
+<div id="popupImage" class="popup" onclick="hideImage()">
+  <span class="close">&times;</span>
+  <img class="popup-content" id="popupImg">
+</div>
+
   <footer class="footer" style="background-image: url(J4o.gif);">
     <p>&copy; 2025 | Haru. Terpercaya, Cepat, Aman dan Mudah.</p>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+function showImage(event, src) {
+  event.preventDefault(); // MENCEGAH LINK MENGARAHKAN KE #
+  const popup = document.getElementById("popupImage");
+  const popupImg = document.getElementById("popupImg");
+  popup.style.display = "block";
+  popupImg.src = src;
+}
+
+
+  function hideImage() {
+    document.getElementById("popupImage").style.display = "none";
+  }
+</script>
+
 </body>
 </html>
